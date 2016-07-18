@@ -1,18 +1,19 @@
 #ifndef POLIDEPORTIVO_H
 #define POLIDEPORTIVO_H
+#include "Objetos/Headers/espacio_comun.h"
+#include <vector>
 
+class Polideportivo{
 
-class Polideportivo
-{
 public:
     static Polideportivo * instance();
 protected:
     Polideportivo();
-    Polideportivo(const Polideportivo& orig);
-    virtual ~Polideportivo();
-protected:
-    static Polideportivo *instancia;
+
 public:
+
+    static Polideportivo *instancia;
+
 
 };
 

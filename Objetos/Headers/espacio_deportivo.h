@@ -1,6 +1,6 @@
 #ifndef ESPACIO_DEPORTIVO_H
 #define ESPACIO_DEPORTIVO_H
-
+#include <iostream>
 
 class Espacio_deportivo
 {

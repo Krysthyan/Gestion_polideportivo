@@ -1,6 +1,6 @@
 #include "Headers/polideportivo.h"
 
-Polideportivo *Polideportivo::instancia = 0;
+Polideportivo *Polideportivo::instancia = 0 ;
 
 Polideportivo *Polideportivo::instance()
 {
