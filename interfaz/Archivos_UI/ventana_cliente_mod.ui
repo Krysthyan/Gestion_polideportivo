@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ventana_cliente_mod</class>
+ <widget class="QWidget" name="Ventana_cliente_mod">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>287</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>195</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_email">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>190</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_cedula">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>135</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dirección</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_direccion">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>130</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_telefono">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>160</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>44</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cedula</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>74</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombres</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>165</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Teléfono</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_apellidos">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_agregar">
+   <property name="geometry">
+    <rect>
+     <x>259</x>
+     <y>240</y>
+     <width>121</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>105</y>
+     <width>59</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apellidos</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="entry_nombres">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>70</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_regresar">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>240</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Regresar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
