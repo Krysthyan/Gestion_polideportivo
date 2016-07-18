@@ -5,8 +5,12 @@ Polideportivo *Polideportivo::instancia = 0 ;
 Polideportivo *Polideportivo::instance(std::__cxx11::string nombre, std::__cxx11::string descripcion)
 {
     if(instancia == 0)
-        instancia = new Polideportivo(nombre, decripcion);
+        instancia = new Polideportivo(nombre, descripcion);
     return instancia;
+}
+
+Polideportivo::Polideportivo(){
+
 }
 
 Polideportivo *Polideportivo::instance()
