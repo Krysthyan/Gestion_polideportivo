@@ -6,11 +6,13 @@
 class Polideportivo{
 
 public:
-    static Polideportivo * instance();
+    static Polideportivo * instance(std::string nombre,
+                                    std::string descripcion);
+    static Polideportivo *instance();
     void agregar_espacio(Espacio_comun espacio_comun);
-    void eliminar_espacio(Estacio_comun espacio_comun);
+    void eliminar_espacio(Espacio_comun espacio_comun);
 protected:
-    Polideportivo();
+    Polideportivo(std::string nombre, std::string descripcion);
 
 public:
     static Polideportivo *instancia;
