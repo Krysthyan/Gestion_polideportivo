@@ -4,6 +4,7 @@
 #include "Objetos/Headers/reserva.h"
 #include "Mysql/Headers/reserva_mysql.h"
 #include "espacio_comun_srv.h"
+#include "obtencion_fechas.h"
 
 #include <vector>
 
@@ -29,9 +30,11 @@ public:
     void eliminar_reserva(std::string nombre_cliente,std::string fecha_inicio);
 
     std::string calcular_pago(std::string costo);
+    std::vector<std::string> split(const std::string& s, const std::string& delim, const bool keep_empty = true);
 private:
     Reserva_mysql reserva_mysql;
     Espacio_comun_SRV espacio_comun_srv;
+    Obtencion_fechas obtencion_fechas;
 };
 
 #endif // RESERVA_SRV_H

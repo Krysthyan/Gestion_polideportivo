@@ -20,7 +20,20 @@ void Reserva_mysql::insertar_reserva(Reserva *reserva)
 
 std::vector<Reserva> *Reserva_mysql::obtener_reserva(std::__cxx11::string nombre_cliente)
 {
-
+    this->conexion_db->resultset = this->conexion_db->statement->executeQuery("SELECT  *from reserva "
+                                                                              "where nombre_cliente'"+nombre_cliente+"'");
+    std::vector<Reserva> *reserva = new std::vector<Reserva>;
+    while (this->conexion_db->resultset->next()){
+        Reserva *reser = new Reserva(this->conexion_db->resultset->getString(1),
+                                       this->conexion_db->resultset->getString(2),
+                                       this->conexion_db->resultset->getString(3),
+                                       this->conexion_db->resultset->getString(4),
+                                       this->conexion_db->resultset->getString(5),
+                                       this->conexion_db->resultset->getString(6),
+                                     this->conexion_db->resultset->getString(7));
+        reserva->push_back(*reser);
+    }
+    return reserva;
 }
 
 void Reserva_mysql::actualizar_reserva(Reserva *reserva,

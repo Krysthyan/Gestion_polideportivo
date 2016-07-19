@@ -51,7 +51,8 @@ SOURCES += main.cpp\
     Objetos/reserva.cpp \
     Servicio/reserva_srv.cpp \
     interfaz/tabla_clientes.cpp \
-    interfaz/tabla_admin.cpp
+    interfaz/tabla_admin.cpp \
+    Servicio/obtencion_fechas.cpp
 
 HEADERS  += \
     Servicio/Headers/login_srv.h \
@@ -92,7 +93,8 @@ HEADERS  += \
     Objetos/Headers/reserva.h \
     Servicio/Headers/reserva_srv.h \
     interfaz/Headers/tabla_clientes.h \
-    interfaz/Headers/tabla_admin.h
+    interfaz/Headers/tabla_admin.h \
+    Servicio/Headers/obtencion_fechas.h
 
 FORMS    += \
     interfaz/Headers/Archivos_UI/ventana_login.ui \

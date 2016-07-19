@@ -26,7 +26,35 @@ void Reserva_SRV::agregar_reserva(std::__cxx11::string nombre_cliente,
     this->reserva_mysql.insertar_reserva(reserva);
 }
 
+std::vector<Reserva> *Reserva_SRV::obtener_reserva(string nombre_cliente)
+{
+    return this->reserva_mysql.obtener_reserva(nombre_cliente);
+}
+
+
+inline std::vector<std::string> split(const std::string& s, const std::string& delim, const bool keep_empty = true) {
+    std::vector<std::string> result;
+    if (delim.empty()) {
+        result.push_back(s);
+        return result;
+    }
+    std::string::const_iterator substart = s.begin(), subend;
+    while (true) {
+        subend = std::search(substart, s.end(), delim.begin(), delim.end());
+        std::string temp(substart, subend);
+        if (keep_empty || !temp.empty()) {
+            result.push_back(temp);
+        }
+        if (subend == s.end()) {
+            break;
+        }
+        substart = subend + delim.size();
+    }
+    return result;
+}
+
 inline std::string Reserva_SRV::calcular_pago(std::__cxx11::string costo)
 {
     return "45.6";
 }
+
