@@ -72,7 +72,7 @@
     <string>Hora cerrada</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_cancelar">
+  <widget class="QPushButton" name="pushButtonCancelar">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -111,7 +111,7 @@
     <string>Précio por hora</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEditNombrePolideportivo">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -219,7 +219,7 @@
     <string>24h</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_agregar">
+  <widget class="QPushButton" name="pushButtonModificar">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -264,7 +264,7 @@
     <number>0</number>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButtonConsultar">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -277,7 +277,7 @@
     <string>Consultar</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="entry_nombre">
+  <widget class="QLineEdit" name="lineEditNombreEspacio">
    <property name="geometry">
     <rect>
      <x>180</x>
