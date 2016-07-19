@@ -57,8 +57,39 @@ CREATE TABLE `espacio` (
 
 LOCK TABLES `espacio` WRITE;
 /*!40000 ALTER TABLE `espacio` DISABLE KEYS */;
-INSERT INTO `espacio` VALUES ('Cancha Basketbol'),('Cancha Futbol'),('Cancha Tenis'),('Piscina');
+INSERT INTO `espacio` VALUES ('Bar'),('Cancha Basketbol'),('Cancha Futbol'),('Cancha Tenis'),('Piscina'),('Salon de resepciones');
 /*!40000 ALTER TABLE `espacio` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `espacio_comun`
+--
+
+DROP TABLE IF EXISTS `espacio_comun`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `espacio_comun` (
+  `nombre` varchar(45) NOT NULL,
+  `nombre_polideportivo` varchar(45) NOT NULL,
+  `tipo_espacio` varchar(45) NOT NULL,
+  `estado` varchar(45) NOT NULL,
+  `hora_entrada` time NOT NULL,
+  `hora_salida` time NOT NULL,
+  `precio_por_hora` double NOT NULL,
+  PRIMARY KEY (`nombre`),
+  KEY `fk_nombre_polideportivo_idx` (`nombre_polideportivo`),
+  CONSTRAINT `fk_nombre_polideportivo` FOREIGN KEY (`nombre_polideportivo`) REFERENCES `polideportivo` (`nombre`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `espacio_comun`
+--
+
+LOCK TABLES `espacio_comun` WRITE;
+/*!40000 ALTER TABLE `espacio_comun` DISABLE KEYS */;
+INSERT INTO `espacio_comun` VALUES ('Cancha Carlos Calle','Juan Perez','Cancha Futbol','libre','09:00:00','11:00:00',15);
+/*!40000 ALTER TABLE `espacio_comun` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -104,7 +135,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('',''),('1105129686','Krysthyan'),('1105129687','hernandez'),('1105129688','12345');
+INSERT INTO `login` VALUES ('',''),('1105129686','Krysthyan3343'),('1105129687','hernandez'),('1105129688','12345');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,6 +166,30 @@ LOCK TABLES `persona` WRITE;
 INSERT INTO `persona` VALUES ('','','','','',''),('1105129686','Krysthyan','Hnz','presidente cordova y tarqui','0979538695','krysthyan_09h@yahoo.com'),('1105129688','Juan','Perez','Av las americas','09990','juan@perez.com');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `polideportivo`
+--
+
+DROP TABLE IF EXISTS `polideportivo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `polideportivo` (
+  `nombre` varchar(45) NOT NULL,
+  `descripcion` varchar(45) NOT NULL,
+  PRIMARY KEY (`nombre`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `polideportivo`
+--
+
+LOCK TABLES `polideportivo` WRITE;
+/*!40000 ALTER TABLE `polideportivo` DISABLE KEYS */;
+INSERT INTO `polideportivo` VALUES ('Juan Perez','NULL');
+/*!40000 ALTER TABLE `polideportivo` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -145,4 +200,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-18 15:21:05
+-- Dump completed on 2016-07-18 22:22:11
