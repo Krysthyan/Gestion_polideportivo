@@ -47,7 +47,26 @@ inline void Ventana_espacio_deportivo::agregar_espacios()
     }
 }
 
-void Ventana_espacio_deportivo::on_pushButton_clicked()
-{
 
+void Ventana_espacio_deportivo::on_btn_agregar_clicked()
+{
+    std::string segundos = ":00";
+    //this->ventana_polideportivo = new Ventana_agregar_polideportivo;
+
+    std::string nombre = ui->entry_nombre->text().toUtf8().constData();
+    std::string tipo_espacio = ui->comboBox_espacios->currentText().toUtf8().constData();
+    std::string estado = ui->comboBox_estados->currentText().toUtf8().constData();
+
+    std::string hora_apertura = ui->time_hora_apertura->text().toUtf8().constData()+segundos;
+
+    std::string hora_cerrada = ui->time_hora_cerrada->text().toUtf8().constData()+segundos;
+    double precio_por_hora = std::stod(ui->spin_precio_por_hora->text().toUtf8().constData());
+
+    this->espacio_comun = new Espacio_comun(nombre, tipo_espacio, estado, hora_apertura,
+                                            hora_cerrada, precio_por_hora);
+    this->polideportivo->agregar_espacio(*espacio_comun);
+
+
+    this->close();
+    //ventana_polideportivo->show();
 }

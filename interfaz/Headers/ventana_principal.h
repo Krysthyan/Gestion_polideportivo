@@ -6,7 +6,7 @@
 #include "ventana_cliente_mod.h"
 #include "ventana_cliente_del.h"
 #include "ventana_admin.h"
-#include "ventana_polideportivo.h"
+#include "ventana_agregar_polideportivo.h"
 
 namespace Ui {
 class Ventana_principal;
@@ -43,7 +43,7 @@ private:
 
     Ventana_admin *ventana_admin;
 
-    Ventana_polideportivo *ventana_polideportivo;
+    Ventana_agregar_polideportivo *ventana_polideportivo;
 };
 
 #endif // VENTANA_PRINCIPAL_H

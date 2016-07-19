@@ -62,6 +62,6 @@ void Ventana_principal::on_btn_eliminar_admin_clicked()
 
 void Ventana_principal::on_btn_agregar_pol_clicked()
 {
-    this->ventana_polideportivo = new Ventana_polideportivo();
+    this->ventana_polideportivo = new Ventana_agregar_polideportivo();
     this->ventana_polideportivo->show();
 }

@@ -7,11 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>533</width>
-    <height>379</height>
+    <height>377</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <disabledon>:/equipo.png</disabledon>
+   </iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -42,7 +50,7 @@
       <x>150</x>
       <y>40</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -53,9 +61,9 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>85</y>
+      <y>81</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -66,9 +74,9 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>130</y>
+      <y>121</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -79,9 +87,9 @@
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>130</y>
+      <y>121</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -92,9 +100,9 @@
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>85</y>
+      <y>81</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -129,7 +137,7 @@
       <x>420</x>
       <y>40</y>
       <width>80</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -141,25 +149,25 @@
      <rect>
       <x>150</x>
       <y>195</y>
-      <width>80</width>
-      <height>22</height>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Agregar</string>
+     <string>Crear polideportivo</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_eliminar_pol">
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>285</y>
-      <width>80</width>
-      <height>22</height>
+      <y>276</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Eliminar</string>
+     <string>Eliminar polideportivo</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -188,13 +196,76 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>240</y>
-      <width>80</width>
-      <height>22</height>
+      <y>235</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Modficar</string>
+     <string>Modficar polideportivo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>195</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <disabledon>:/ckBRWKh - Imgur.png</disabledon>
+     </iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>276</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <disabledoff>:/94mi8cQ - Imgur.png</disabledoff>
+     </iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>235</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>:/a56UjCk - Imgur.png</normalon>
+     </iconset>
     </property>
    </widget>
   </widget>

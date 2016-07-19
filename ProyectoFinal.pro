@@ -30,16 +30,14 @@ SOURCES += main.cpp\
     interfaz/ventana_admin.cpp \
     Servicio/admin_srv.cpp \
     Mysql/admin_mysql.cpp \
-    interfaz/ventana_polideportivo.cpp \
     interfaz/ventana_espacio_deportivo.cpp \
     Servicio/estado_srv.cpp \
     Mysql/estado_mysql.cpp \
     Servicio/espacio_srv.cpp \
     Mysql/espacio_mysql.cpp \
-    Objetos/espacio_deportivo.cpp \
-    Objetos/espacio_complementario.cpp \
     Objetos/espacio_comun.cpp \
-    Objetos/polideportivo.cpp
+    Objetos/polideportivo.cpp \
+    interfaz/ventana_agregar_polideportivo.cpp
 
 HEADERS  += \
     Servicio/Headers/login_srv.h \
@@ -59,16 +57,14 @@ HEADERS  += \
     interfaz/Headers/ventana_admin.h \
     Servicio/Headers/admin_srv.h \
     Mysql/Headers/admin_mysql.h \
-    interfaz/Headers/ventana_polideportivo.h \
     interfaz/Headers/ventana_espacio_deportivo.h \
     Servicio/Headers/estado_srv.h \
     Mysql/Headers/estado_mysql.h \
     Servicio/Headers/espacio_srv.h \
     Mysql/Headers/espacio_mysql.h \
-    Objetos/Headers/espacio_deportivo.h \
-    Objetos/Headers/espacio_complementario.h \
     Objetos/Headers/espacio_comun.h \
-    Objetos/Headers/polideportivo.h
+    Objetos/Headers/polideportivo.h \
+    interfaz/Headers/ventana_agregar_polideportivo.h
 
 FORMS    += \
     interfaz/Headers/Archivos_UI/ventana_login.ui \
@@ -77,8 +73,8 @@ FORMS    += \
     interfaz/Archivos_UI/ventana_cliente_mod.ui \
     interfaz/Archivos_UI/ventana_cliente_del.ui \
     interfaz/Archivos_UI/ventana_admin.ui \
-    interfaz/Archivos_UI/ventana_polideportivo.ui \
-    interfaz/Archivos_UI/ventana_espacio_deportivo.ui
+    interfaz/Archivos_UI/ventana_espacio_deportivo.ui \
+    interfaz/Archivos_UI/ventana_agregar_polideportivo.ui
 LIBS += -lmysqlcppconn
 
 RESOURCES += \
@@ -87,4 +83,10 @@ RESOURCES += \
 DISTFILES += \
     LICENSE \
     README.md \
-    SQL/database.sql
+    SQL/database.sql \
+    Imagenes/94mi8cQ - Imgur.png \
+    Imagenes/a56UjCk - Imgur.png \
+    Imagenes/ckBRWKh - Imgur.png \
+    Imagenes/94mi8cQ - Imgur.png \
+    Imagenes/a56UjCk - Imgur.png \
+    Imagenes/ckBRWKh - Imgur.png
