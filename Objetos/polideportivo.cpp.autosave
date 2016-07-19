@@ -25,7 +25,7 @@ void Polideportivo::agregar_espacio(Espacio_comun espacio_comun)
     this->espacios_deportivos.push_back(espacio_comun);
 }
 
-void Polideportivo::eliminar_espacio(Espacio_comun espacio_comun)
+rvoid Polideportivo::eliminar_espacio(Espacio_comun espacio_comun)
 {
 
 }

@@ -46,3 +46,8 @@ inline void Ventana_espacio_deportivo::agregar_espacios()
         ui->comboBox_espacios->addItem(espacio.c_str());
     }
 }
+
+void Ventana_espacio_deportivo::on_pushButton_clicked()
+{
+
+}
