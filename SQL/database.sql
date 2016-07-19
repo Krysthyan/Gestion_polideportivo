@@ -104,7 +104,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('',''),('1105129686','Krysthyan3343'),('1105129687','hernandez'),('1105129688','12345');
+INSERT INTO `login` VALUES ('',''),('1105129686','Krysthyan'),('1105129687','hernandez'),('1105129688','12345');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 

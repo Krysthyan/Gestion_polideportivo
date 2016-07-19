@@ -83,3 +83,8 @@ LIBS += -lmysqlcppconn
 
 RESOURCES += \
     Imagenes/img.qrc
+
+DISTFILES += \
+    LICENSE \
+    README.md \
+    SQL/database.sql
