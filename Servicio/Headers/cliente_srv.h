@@ -2,6 +2,7 @@
 #define CLIENTE_SRV_H
 #include "Objetos/Headers/cliente.h"
 #include "Mysql/Headers/cliente_mysql.h"
+#include <vector>
 
 class Cliente_SRV
 {
@@ -17,6 +18,8 @@ public:
     void actualizar_cliente(std::string cedula, std::string nombres, std::string apellidos,
                            std::string direccion, std::string telefono, std::string email);
     void eliminar_cliente(std::string cedula);
+
+    std::vector<Cliente> *obtener_lista_clientes();
 
 
 private:

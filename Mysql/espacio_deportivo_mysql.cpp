@@ -44,7 +44,7 @@ void Espacio_deportivo_mysql::actualizar_espacio(Espacio_comun *espacio_comun)
                                 "', estado='"+espacio_comun->obtener_estado()+
                                 "', hora_entrada='"+espacio_comun->obtener_hora_apertura()+
                                 "', hora_salida='"+espacio_comun->obtener_hora_cierre()+
-                                "', precio_por_horA='"+espacio_comun->obtener_precio_por_hora()+"' WHERE nombre = '"+
+                                "', precio_por_hora='"+espacio_comun->obtener_precio_por_hora()+"' WHERE nombre = '"+
                                 espacio_comun->obtener_nombre()+"'";
 
     this->conexion_db->statement->executeUpdate(sql_espacio);
@@ -75,4 +75,9 @@ std::vector<Espacio_comun> *Espacio_deportivo_mysql::obtener_lista_espacios_comu
         espacios_comun->push_back(*espacio);
     }
     return espacios_comun;
+}
+
+void Espacio_deportivo_mysql::actualizar_estado(std::__cxx11::string estado, std::__cxx11::string nombre_espacio)
+{
+    this->conexion_db->statement->executeUpdate("UPDATE espacio_comun SET  estado='"+estado+"' where nombre='"+nombre_espacio+"'");
 }

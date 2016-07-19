@@ -11,9 +11,13 @@
 #include "Servicio/Headers/espacio_comun_srv.h"
 #include "Objetos/Headers/espacio_comun.h"
 
+#include "Servicio/Headers/reserva_srv.h"
+
+
 #include <QWidget>
 #include <QMessageBox>
 #include <vector>
+#include <QDateTime>
 
 namespace Ui {
 class Ventana_reserva;
@@ -36,6 +40,8 @@ private slots:
 
     void on_comboBox_espacios_activated(int index);
 
+    void on_btn_reservar_clicked();
+
 private:
     Ui::Ventana_reserva *ui;
     Cliente_SRV cliente_srv;
@@ -45,6 +51,8 @@ private:
     Espacio_comun_SRV espacio_comun_srv;
 
     std::vector<Espacio_comun> *espacios;
+
+    Reserva_SRV reserva_srv;
 
 };
 

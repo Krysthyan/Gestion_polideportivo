@@ -47,3 +47,8 @@ std::vector<Espacio_comun> *Espacio_comun_SRV::obtener_lista_espacios_comun(std:
 {
     return this->espacio_mysql.obtener_lista_espacios_comun(nombre_polideportivo);
 }
+
+void Espacio_comun_SRV::actualizar_estado(std::__cxx11::string estado, std::__cxx11::string nombre_espacio)
+{
+    this->espacio_mysql.actualizar_estado(estado, nombre_espacio);
+}

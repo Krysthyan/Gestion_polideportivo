@@ -5,6 +5,7 @@
 #include "Servicio/Headers/polideportivo_srv.h"
 #include <QWidget>
 #include <QMessageBox>
+#include <QSize>
 
 namespace Ui {
 class Ventana_agregar_polideportivo;

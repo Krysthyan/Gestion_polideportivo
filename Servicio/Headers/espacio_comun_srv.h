@@ -24,6 +24,8 @@ public:
 
     std::vector<Espacio_comun> *obtener_lista_espacios_comun(std::string nombre_polideportivo);
 
+    void actualizar_estado(std::string estado, std::string nombre_espacio);
+
 
 private:
     Espacio_deportivo_mysql espacio_mysql;

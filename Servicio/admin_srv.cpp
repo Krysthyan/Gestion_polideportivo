@@ -34,3 +34,8 @@ void Admin_SRV::eliminar_admin(std::__cxx11::string cedula)
 {
     this->admin_mysql.eliminar_admin(cedula);
 }
+
+std::vector<Admin> *Admin_SRV::obtener_lista_admin()
+{
+    return this->admin_mysql.obtener_lista_admin();
+}

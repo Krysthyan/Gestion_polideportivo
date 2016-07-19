@@ -66,6 +66,22 @@ void Cliente_mysql::eliminar_cliente(std::__cxx11::string cedula)
     this->conexion_db->statement->executeUpdate(sql_cliente);
 }
 
+std::vector<Cliente> *Cliente_mysql::obtener_lista_clientes()
+{
+    this->conexion_db->resultset = this->conexion_db->statement->executeQuery("SELECT  *from persona");
+    std::vector<Cliente> *clientes = new std::vector<Cliente>;
+    while (this->conexion_db->resultset->next()){
+        Cliente *cliente = new Cliente(this->conexion_db->resultset->getString(1),
+                                       this->conexion_db->resultset->getString(2),
+                                       this->conexion_db->resultset->getString(3),
+                                       this->conexion_db->resultset->getString(4),
+                                       this->conexion_db->resultset->getString(5),
+                                       this->conexion_db->resultset->getString(6));
+        clientes->push_back(*cliente);
+    }
+    return clientes;
+}
+
 
 
 

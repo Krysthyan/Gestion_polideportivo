@@ -71,3 +71,20 @@ void Admin_mysql::actualizar_password(std::__cxx11::string cedula, std::__cxx11:
                                 "' where usuario = '"+cedula+"'";
     this->conexion_db->statement->executeUpdate(sql_login);
 }
+
+std::vector<Admin> *Admin_mysql::obtener_lista_admin()
+{
+    this->conexion_db->resultset = this->conexion_db->statement->executeQuery("SELECT * FROM persona,login where persona.cedula=login.usuario");
+    std::vector<Admin> *admins = new std::vector<Admin>;
+    while (this->conexion_db->resultset->next()){
+        Admin *admin = new Admin(this->conexion_db->resultset->getString(1),
+                                "*****************",
+                                this->conexion_db->resultset->getString(2),
+                                this->conexion_db->resultset->getString(3),
+                                this->conexion_db->resultset->getString(4),
+                                this->conexion_db->resultset->getString(5),
+                                this->conexion_db->resultset->getString(6));
+        admins->push_back(*admin);
+    }
+    return admins;
+}

@@ -101,3 +101,75 @@ void Ventana_principal::on_btn_reservar_clicked()
     this->ventana_reserva = new Ventana_reserva();
     this->ventana_reserva->show();
 }
+
+void Ventana_principal::on_actionMostar_Clientes_triggered()
+{
+    this->tabla_clientes = new Tabla_clientes();
+    this->tabla_clientes->show();
+}
+
+void Ventana_principal::on_actionMostar_Administradores_triggered()
+{
+    this->tabla_admin = new Tabla_admin();
+    this->tabla_admin->show();
+}
+
+void Ventana_principal::on_actionSalir_triggered()
+{
+    exit(0);
+}
+
+void Ventana_principal::on_actionAgregar_triggered()
+{
+    this->ventana_admin = new Ventana_admin();
+    this->ventana_admin->show();
+}
+
+void Ventana_principal::on_actionModificar_triggered()
+{
+    this->ventana_cliente_mod = new Ventana_cliente_mod();
+    this->ventana_cliente_mod->show();
+}
+
+void Ventana_principal::on_actionEliminar_triggered()
+{
+    this->ventana_cliente_del = new Ventana_cliente_del();
+    this->ventana_cliente_del->show();
+}
+
+void Ventana_principal::on_actionAgregar_2_triggered()
+{
+    this->ventana_cliente = new Ventana_cliente();
+    this->ventana_cliente->show();
+
+}
+
+void Ventana_principal::on_actionModificar_2_triggered()
+{
+    this->ventana_cliente_mod = new Ventana_cliente_mod();
+    this->ventana_cliente_mod->show();
+}
+
+void Ventana_principal::on_actionEliminar_2_triggered()
+{
+    this->ventana_cliente_del = new Ventana_cliente_del();
+    this->ventana_cliente_del->show();
+}
+
+void Ventana_principal::on_actionAgregar_3_triggered()
+{
+    this->ventana_polideportivo = new Ventana_agregar_polideportivo();
+    this->ventana_polideportivo->show();
+}
+
+void Ventana_principal::on_actionModificar_3_triggered()
+{
+    this->ven_mod_pol = new Ventana_mod_polideportivo();
+    this->ven_mod_pol->show();
+}
+
+void Ventana_principal::on_actionEliminar_3_triggered()
+{
+    this->ven_del_pol = new Ventana_del_polideportivo();
+    this->ven_del_pol->show();
+}

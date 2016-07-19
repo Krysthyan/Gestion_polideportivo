@@ -2,6 +2,7 @@
 #define ADMIN_SRV_H
 #include "Objetos/Headers/admin.h"
 #include "Mysql/Headers/admin_mysql.h"
+#include <vector>
 
 class Admin_SRV
 {
@@ -17,6 +18,8 @@ public:
     void actualizar_admin(std::string cedula, std::string password, std::string nombres, std::string apellidos,
                            std::string direccion, std::string telefono, std::string email);
     void eliminar_admin(std::string cedula);
+
+    std::vector<Admin> *obtener_lista_admin();
 
 private:
     Admin_mysql admin_mysql;

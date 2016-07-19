@@ -18,6 +18,7 @@ public:
                           std::string nombre_espacio);
 
     std::vector<Espacio_comun> *obtener_lista_espacios_comun(std::string nombre_polideportivo);
+    void actualizar_estado(std::string estado,std::string nombre_espacio);
 private:
     Conexion_DB *conexion_db=Conexion_DB::instance();
 };

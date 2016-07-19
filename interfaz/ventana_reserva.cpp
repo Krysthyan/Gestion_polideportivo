@@ -42,6 +42,15 @@ void Ventana_reserva::on_entry_cedula_cliente_returnPressed()
         }
 
 
+        ui->dateTime_inicio->setDateTime(QDateTime::currentDateTime());
+        ui->dateTime_fin->setDateTime(QDateTime::currentDateTime());
+
+        std::string munn= "3,4";
+
+        float num = std::stof(munn);
+
+        std::cout<<"numero flotante"<<std::to_string(num).c_str()<<std::endl;
+
 
     } catch(...){
         if (QMessageBox::Yes == QMessageBox(QMessageBox::Information,
@@ -89,7 +98,41 @@ void Ventana_reserva::on_comboBox_espacios_activated(int index)
             std::string horario = espacio.obtener_hora_apertura()+" - "+espacio.obtener_hora_cierre();
             ui->label_horario->setText(horario.c_str());
             ui->label_precio->setText(espacio.obtener_precio_por_hora().c_str());
+
+
+
+
+            if (espacio.obtener_estado() == "Libre")
+                ui->btn_reservar->setEnabled(true);
+            else
+                ui->btn_reservar->setEnabled(false);
         }
 
     }
+}
+
+void Ventana_reserva::on_btn_reservar_clicked()
+{
+    std::string cedula_cliente= ui->entry_cedula_cliente->text().toUtf8().constData();
+    std::string nombre_polideportivo = ui->comboBox_pol->currentText().toUtf8().constData();
+    std::string espacio_seleccionado = ui->comboBox_espacios->currentText().toUtf8().constData();
+
+    std::string fecha_inicio = ui->dateTime_inicio->text().toUtf8().constData();
+    std::string fecha_final = ui->dateTime_fin->text().toUtf8().constData();
+
+    std::string pago = ui->label_precio->text().toUtf8().constData();
+
+    std::string tipo_pago = ui->comboBox_tipo_pago->currentText().toUtf8().constData();
+
+
+
+
+    this->reserva_srv.agregar_reserva(cedula_cliente,espacio_seleccionado,
+                                      fecha_inicio,fecha_final,pago,tipo_pago,"vacio");
+
+
+    QMessageBox mgBox;
+    mgBox.setText("Su reserva ha sido registrada con éxito");
+    mgBox.exec();
+    this->close();
 }

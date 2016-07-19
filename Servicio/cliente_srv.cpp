@@ -30,3 +30,8 @@ void Cliente_SRV::eliminar_cliente(std::__cxx11::string cedula)
 {
     this->cliente_mysql.eliminar_cliente(cedula);
 }
+
+std::vector<Cliente> *Cliente_SRV::obtener_lista_clientes()
+{
+    return this->cliente_mysql.obtener_lista_clientes();
+}

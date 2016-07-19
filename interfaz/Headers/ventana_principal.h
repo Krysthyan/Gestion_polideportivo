@@ -13,6 +13,8 @@
 #include "ventana_del_polideportivo.h"
 #include "ventana_mod_polideportivo.h"
 #include "ventana_reserva.h"
+#include "tabla_clientes.h"
+#include "tabla_admin.h"
 
 namespace Ui {
 class Ventana_principal;
@@ -53,6 +55,30 @@ private slots:
 
     void on_btn_reservar_clicked();
 
+    void on_actionMostar_Clientes_triggered();
+
+    void on_actionMostar_Administradores_triggered();
+
+    void on_actionSalir_triggered();
+
+    void on_actionAgregar_triggered();
+
+    void on_actionModificar_triggered();
+
+    void on_actionEliminar_triggered();
+
+    void on_actionAgregar_2_triggered();
+
+    void on_actionModificar_2_triggered();
+
+    void on_actionEliminar_2_triggered();
+
+    void on_actionAgregar_3_triggered();
+
+    void on_actionModificar_3_triggered();
+
+    void on_actionEliminar_3_triggered();
+
 private:
     Ui::Ventana_principal *ui;
     Ventana_cliente *ventana_cliente;
@@ -71,6 +97,9 @@ private:
     Ventana_espacio_del *ventanap_del_espacio;
 
     Ventana_reserva *ventana_reserva;
+
+    Tabla_clientes *tabla_clientes;
+    Tabla_admin *tabla_admin;
 };
 
 #endif // VENTANA_PRINCIPAL_H

@@ -3,6 +3,7 @@
 #include "Servicio/Headers/polideportivo_srv.h"
 #include <QMessageBox>
 #include <QWidget>
+#include <QSize>
 
 namespace Ui {
 class Ventana_del_polideportivo;

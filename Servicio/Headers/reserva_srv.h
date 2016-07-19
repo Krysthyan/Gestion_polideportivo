@@ -3,6 +3,7 @@
 
 #include "Objetos/Headers/reserva.h"
 #include "Mysql/Headers/reserva_mysql.h"
+#include "espacio_comun_srv.h"
 
 #include <vector>
 
@@ -10,8 +11,13 @@ class Reserva_SRV
 {
 public:
     Reserva_SRV();
-    void agregar_reserva(std::string nombre_cliente, std::string nombre_espacio_reserva, std::string fecha_inicio,
-                         std::string fecha_final, std::string pago, std::string tipo_pago,std::string estado_pago);
+    void agregar_reserva(std::string nombre_cliente,
+                         std::string nombre_espacio_reserva,
+                         std::string fecha_inicio,
+                         std::string fecha_final,
+                         std::string pago,
+                         std::string tipo_pago,
+                         std::string estado_pago);
 
     bool existe_reserva(std::string nombre_cliente);
 
@@ -22,9 +28,10 @@ public:
 
     void eliminar_reserva(std::string nombre_cliente,std::string fecha_inicio);
 
-
+    std::string calcular_pago(std::string costo);
 private:
     Reserva_mysql reserva_mysql;
+    Espacio_comun_SRV espacio_comun_srv;
 };
 
 #endif // RESERVA_SRV_H
