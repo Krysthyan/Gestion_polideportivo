@@ -95,3 +95,9 @@ void Ventana_principal::on_btn_modificar_pol_clicked()
     this->ven_mod_pol = new Ventana_mod_polideportivo();
     this->ven_mod_pol->show();
 }
+
+void Ventana_principal::on_btn_reservar_clicked()
+{
+    this->ventana_reserva = new Ventana_reserva();
+    this->ventana_reserva->show();
+}

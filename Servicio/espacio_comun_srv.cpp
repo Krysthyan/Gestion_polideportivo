@@ -42,3 +42,8 @@ void Espacio_comun_SRV::eliminar_espacio_comun(std::__cxx11::string nombre_polid
 {
     this->espacio_mysql.eliminar_espacio(nombre_polideportivo, nombre_espacio);
 }
+
+std::vector<Espacio_comun> *Espacio_comun_SRV::obtener_lista_espacios_comun(std::__cxx11::string nombre_polideportivo)
+{
+    return this->espacio_mysql.obtener_lista_espacios_comun(nombre_polideportivo);
+}

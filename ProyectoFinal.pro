@@ -45,7 +45,11 @@ SOURCES += main.cpp\
     interfaz/ventana_del_polideportivo.cpp \
     interfaz/ventana_mod_polideportivo.cpp \
     Mysql/espacio_deportivo_mysql.cpp \
-    Servicio/espacio_comun_srv.cpp
+    Servicio/espacio_comun_srv.cpp \
+    interfaz/ventana_reserva.cpp \
+    Mysql/reserva_mysql.cpp \
+    Objetos/reserva.cpp \
+    Servicio/reserva_srv.cpp
 
 HEADERS  += \
     Servicio/Headers/login_srv.h \
@@ -80,7 +84,11 @@ HEADERS  += \
     interfaz/Headers/ventana_del_polideportivo.h \
     interfaz/Headers/ventana_mod_polideportivo.h \
     Mysql/Headers/espacio_deportivo_mysql.h \
-    Servicio/Headers/espacio_comun_srv.h
+    Servicio/Headers/espacio_comun_srv.h \
+    interfaz/Headers/ventana_reserva.h \
+    Mysql/Headers/reserva_mysql.h \
+    Objetos/Headers/reserva.h \
+    Servicio/Headers/reserva_srv.h
 
 FORMS    += \
     interfaz/Headers/Archivos_UI/ventana_login.ui \
@@ -94,7 +102,8 @@ FORMS    += \
     interfaz/Archivo_UI/ventana_espacio_del.ui \
     interfaz/Archivos_UI/ventana_espacio_mod.ui \
     interfaz/Archivos_UI/ventana_del_polideportivo.ui \
-    interfaz/Archivos_UI/ventana_mod_polideportivo.ui
+    interfaz/Archivos_UI/ventana_mod_polideportivo.ui \
+    interfaz/Archivos_UI/ventana_reserva.ui
 LIBS += -lmysqlcppconn
 
 RESOURCES += \

@@ -2,6 +2,7 @@
 #define ESPACIO_COMUN_SRV_H
 #include "Objetos/Headers/espacio_comun.h"
 #include "Mysql/Headers/espacio_deportivo_mysql.h"
+#include <vector>
 class Espacio_comun_SRV
 {
 public:
@@ -20,6 +21,8 @@ public:
 
     void eliminar_espacio_comun(std::string nombre_polideportivo,
                                 std::string nombre_espacio);
+
+    std::vector<Espacio_comun> *obtener_lista_espacios_comun(std::string nombre_polideportivo);
 
 
 private:

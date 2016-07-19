@@ -44,3 +44,16 @@ void Polideportivo_mysql::eliminar_polideportivo(std::__cxx11::string nombre)
     std::string sql_polideportivo = "DELETE FROM polideportivo where nombre = '"+nombre+"'";
     this->conexion_db->statement->executeUpdate(sql_polideportivo);
 }
+
+std::vector<Polideportivo> *Polideportivo_mysql::obtener_lista_polideportivo()
+{
+    this->conexion_db->resultset = this->conexion_db->statement->executeQuery("SELECT  *from polideportivo");
+    std::vector<Polideportivo> *polideportivos = new std::vector<Polideportivo>;
+    while (this->conexion_db->resultset->next()){
+        Polideportivo *polideportivo = new Polideportivo(this->conexion_db->resultset->getString(1),
+                                                          this->conexion_db->resultset->getString(2),
+                                                          this->conexion_db->resultset->getString(3));
+        polideportivos->push_back(*polideportivo);
+    }
+    return polideportivos;
+}

@@ -59,3 +59,20 @@ void Espacio_deportivo_mysql::eliminar_espacio(std::__cxx11::string nombre_polid
     this->conexion_db->statement->executeUpdate(sql_espacio);
 
 }
+
+std::vector<Espacio_comun> *Espacio_deportivo_mysql::obtener_lista_espacios_comun(std::__cxx11::string nombre_polideportivo)
+{
+    this->conexion_db->resultset = this->conexion_db->statement->executeQuery("SELECT  *from espacio_comun "
+                                                                              "where nombre_polideportivo='"+nombre_polideportivo+"'");
+    std::vector<Espacio_comun> *espacios_comun = new std::vector<Espacio_comun>;
+    while (this->conexion_db->resultset->next()){
+        Espacio_comun *espacio = new Espacio_comun(this->conexion_db->resultset->getString(1),
+                                                   this->conexion_db->resultset->getString(3),
+                                                   this->conexion_db->resultset->getString(4),
+                                                   this->conexion_db->resultset->getString(5),
+                                                   this->conexion_db->resultset->getString(6),
+                                                   this->conexion_db->resultset->getString(7));
+        espacios_comun->push_back(*espacio);
+    }
+    return espacios_comun;
+}

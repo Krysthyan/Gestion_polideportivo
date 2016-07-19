@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
+    <width>884</width>
     <height>377</height>
    </rect>
   </property>
@@ -49,7 +49,7 @@
      <rect>
       <x>150</x>
       <y>40</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -62,7 +62,7 @@
      <rect>
       <x>150</x>
       <y>81</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -75,7 +75,7 @@
      <rect>
       <x>150</x>
       <y>121</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -88,7 +88,7 @@
      <rect>
       <x>420</x>
       <y>121</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -101,7 +101,7 @@
      <rect>
       <x>420</x>
       <y>81</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -136,7 +136,7 @@
      <rect>
       <x>420</x>
       <y>40</y>
-      <width>80</width>
+      <width>91</width>
       <height>31</height>
      </rect>
     </property>
@@ -147,8 +147,8 @@
    <widget class="QPushButton" name="btn_agregar_pol">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>195</y>
+      <x>700</x>
+      <y>40</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -160,8 +160,8 @@
    <widget class="QPushButton" name="btn_eliminar_pol">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>276</y>
+      <x>700</x>
+      <y>121</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -173,8 +173,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>195</y>
+      <x>580</x>
+      <y>40</y>
       <width>101</width>
       <height>111</height>
      </rect>
@@ -195,8 +195,8 @@
    <widget class="QPushButton" name="btn_modificar_pol">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>235</y>
+      <x>700</x>
+      <y>80</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -208,9 +208,9 @@
    <widget class="QPushButton" name="btn_add_espacio">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>195</y>
-      <width>41</width>
+      <x>700</x>
+      <y>190</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -235,9 +235,9 @@
    <widget class="QPushButton" name="btn_del_espacio">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>276</y>
-      <width>41</width>
+      <x>700</x>
+      <y>271</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -253,9 +253,9 @@
    <widget class="QPushButton" name="btn_mod_espacio">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>235</y>
-      <width>41</width>
+      <x>700</x>
+      <y>230</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -268,13 +268,139 @@
      </iconset>
     </property>
    </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Imagenes/img.qrc">:/N9Pp1PA - Imgur.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_reservar">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>185</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reservar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_verificar_reserva">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>227</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verificar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_mostar_reserva">
+    <property name="geometry">
+     <rect>
+      <x>149</x>
+      <y>270</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mostar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>180</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Imagenes/img.qrc">:/RFQv5iR - Imgur.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_listar_facturas">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>188</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Listar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_reporte_facturas">
+    <property name="geometry">
+     <rect>
+      <x>419</x>
+      <y>273</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reporte</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_verificar_facturas">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>230</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verificar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>181</y>
+      <width>131</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../../Imagenes/img.qrc">:/b9CfqZR - Imgur.png</pixmap>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>533</width>
+     <width>884</width>
      <height>19</height>
     </rect>
    </property>

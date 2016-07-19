@@ -26,3 +26,8 @@ void Polideportivo_SRV::eliminar_cpolideportivo(std::__cxx11::string nombre)
 {
     this->polideportivo_mysql.eliminar_polideportivo(nombre);
 }
+
+std::vector<Polideportivo> *Polideportivo_SRV::obtener_lista_polideportivos()
+{
+    return this->polideportivo_mysql.obtener_lista_polideportivo();
+}

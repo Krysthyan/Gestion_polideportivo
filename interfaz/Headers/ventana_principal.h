@@ -12,6 +12,7 @@
 #include "ventana_espacio_del.h"
 #include "ventana_del_polideportivo.h"
 #include "ventana_mod_polideportivo.h"
+#include "ventana_reserva.h"
 
 namespace Ui {
 class Ventana_principal;
@@ -50,6 +51,8 @@ private slots:
 
     void on_btn_modificar_pol_clicked();
 
+    void on_btn_reservar_clicked();
+
 private:
     Ui::Ventana_principal *ui;
     Ventana_cliente *ventana_cliente;
@@ -66,6 +69,8 @@ private:
     Ventana_espacio_deportivo *ventana_add_espacio;
     Ventana_espacio_mod *ventana_mod_espacio;
     Ventana_espacio_del *ventanap_del_espacio;
+
+    Ventana_reserva *ventana_reserva;
 };
 
 #endif // VENTANA_PRINCIPAL_H
