@@ -13,14 +13,21 @@ Ventana_agregar_polideportivo::~Ventana_agregar_polideportivo()
     delete ui;
 }
 
-void Ventana_agregar_polideportivo::on_btn_agregar_espacio_clicked()
+void Ventana_agregar_polideportivo::on_btn_agregar_clicked()
 {
-    this->ventana_e_d = new Ventana_espacio_deportivo();
-    this->ventana_e_d->show();
-    this->destroy(true);
-}
+    try{
+        std::string nombre = ui->entry_nombre->text().toUtf8().constData();
+        std::string descripcion = ui->entry_descripcion->text().toUtf8().constData();
+        std::string direccion = ui->entry_direccion->text().toUtf8().constData();
 
-void Ventana_agregar_polideportivo::agregar_espacios()
-{
-
+        this->pol_srv.agregar_polideportivo(nombre, descripcion, direccion);
+        QMessageBox mgBox;
+        mgBox.setText("Polideportivo registrado");
+        mgBox.exec();
+        this->close();
+    }catch (sql::SQLException &e){
+        QMessageBox mgBox;
+        mgBox.setText(e.what());
+        mgBox.exec();
+    }
 }

@@ -50,8 +50,9 @@ inline void Ventana_espacio_deportivo::agregar_espacios()
 
 void Ventana_espacio_deportivo::on_btn_agregar_clicked()
 {
+    std::string nombre_polideportivo= ui->entry_nombre_pol->text().toUtf8().constData();
     std::string segundos = ":00";
-    //this->ventana_polideportivo = new Ventana_agregar_polideportivo;
+
 
     std::string nombre = ui->entry_nombre->text().toUtf8().constData();
     std::string tipo_espacio = ui->comboBox_espacios->currentText().toUtf8().constData();
@@ -60,13 +61,41 @@ void Ventana_espacio_deportivo::on_btn_agregar_clicked()
     std::string hora_apertura = ui->time_hora_apertura->text().toUtf8().constData()+segundos;
 
     std::string hora_cerrada = ui->time_hora_cerrada->text().toUtf8().constData()+segundos;
-    double precio_por_hora = std::stod(ui->spin_precio_por_hora->text().toUtf8().constData());
+    std::string  precio_por_hora = ui->spin_precio_por_hora->text().toUtf8().constData();
 
-    this->espacio_comun = new Espacio_comun(nombre, tipo_espacio, estado, hora_apertura,
-                                            hora_cerrada, precio_por_hora);
-    this->polideportivo->agregar_espacio(*espacio_comun);
+    try{
+        this->espacio_comun_srv.agregar_espacio_comun(nombre, tipo_espacio, estado,hora_apertura,
+                                                      hora_cerrada,precio_por_hora,nombre_polideportivo);
+
+        this->close();
+    }catch (sql::SQLException &e){
+        QMessageBox mgBox;
+        mgBox.setText(e.what());
+        mgBox.exec();
+    }
 
 
-    this->close();
-    //ventana_polideportivo->show();
+}
+
+void Ventana_espacio_deportivo::on_pushButton_clicked()
+{
+    std::string nombre_polideportivo= ui->entry_nombre_pol->text().toUtf8().constData();
+    try{
+        this->pol_srv.obtener_polideportivo(nombre_polideportivo);
+        ui->btn_agregar->setEnabled(true);
+        ui->comboBox_espacios->setEnabled(true);
+
+        ui->comboBox_estados->setEnabled(true);
+        ui->entry_nombre->setEnabled(true);
+        ui->entry_nombre_pol->setEnabled(false);
+        ui->spin_precio_por_hora->setEnabled(true);
+        ui->time_hora_apertura->setEnabled(true);
+        ui->time_hora_cerrada->setEnabled(true);
+
+    }catch (...){
+        QMessageBox mgBox;
+        mgBox.setText("El polideportivo no se encuentra registrado\n"
+                      "Regrese a ventana principal y resgistre polideportivo");
+        mgBox.exec();
+    }
 }

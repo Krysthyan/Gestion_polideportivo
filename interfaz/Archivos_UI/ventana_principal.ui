@@ -205,7 +205,7 @@
      <string>Modficar polideportivo</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_add_espacio">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -232,7 +232,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btn_del_espacio">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -250,7 +250,7 @@
      </iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btn_mod_espacio">
     <property name="geometry">
      <rect>
       <x>320</x>

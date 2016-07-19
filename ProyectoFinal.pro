@@ -37,7 +37,15 @@ SOURCES += main.cpp\
     Mysql/espacio_mysql.cpp \
     Objetos/espacio_comun.cpp \
     Objetos/polideportivo.cpp \
-    interfaz/ventana_agregar_polideportivo.cpp
+    interfaz/ventana_agregar_polideportivo.cpp \
+    interfaz/ventana_espacio_del.cpp \
+    interfaz/ventana_espacio_mod.cpp \
+    Servicio/polideportivo_srv.cpp \
+    Mysql/polideportivo_mysql.cpp \
+    interfaz/ventana_del_polideportivo.cpp \
+    interfaz/ventana_mod_polideportivo.cpp \
+    Mysql/espacio_deportivo_mysql.cpp \
+    Servicio/espacio_comun_srv.cpp
 
 HEADERS  += \
     Servicio/Headers/login_srv.h \
@@ -64,7 +72,15 @@ HEADERS  += \
     Mysql/Headers/espacio_mysql.h \
     Objetos/Headers/espacio_comun.h \
     Objetos/Headers/polideportivo.h \
-    interfaz/Headers/ventana_agregar_polideportivo.h
+    interfaz/Headers/ventana_agregar_polideportivo.h \
+    interfaz/Headers/ventana_espacio_del.h \
+    interfaz/Headers/ventana_espacio_mod.h \
+    Servicio/Headers/polideportivo_srv.h \
+    Mysql/Headers/polideportivo_mysql.h \
+    interfaz/Headers/ventana_del_polideportivo.h \
+    interfaz/Headers/ventana_mod_polideportivo.h \
+    Mysql/Headers/espacio_deportivo_mysql.h \
+    Servicio/Headers/espacio_comun_srv.h
 
 FORMS    += \
     interfaz/Headers/Archivos_UI/ventana_login.ui \
@@ -74,7 +90,11 @@ FORMS    += \
     interfaz/Archivos_UI/ventana_cliente_del.ui \
     interfaz/Archivos_UI/ventana_admin.ui \
     interfaz/Archivos_UI/ventana_espacio_deportivo.ui \
-    interfaz/Archivos_UI/ventana_agregar_polideportivo.ui
+    interfaz/Archivos_UI/ventana_agregar_polideportivo.ui \
+    interfaz/Archivo_UI/ventana_espacio_del.ui \
+    interfaz/Archivos_UI/ventana_espacio_mod.ui \
+    interfaz/Archivos_UI/ventana_del_polideportivo.ui \
+    interfaz/Archivos_UI/ventana_mod_polideportivo.ui
 LIBS += -lmysqlcppconn
 
 RESOURCES += \

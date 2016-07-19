@@ -1,30 +1,15 @@
 #include "Headers/polideportivo.h"
 
-Polideportivo *Polideportivo::instancia = 0 ;
 
-
-Polideportivo::Polideportivo(){
-    this->espacios_deportivos = new std::vector<Espacio_comun>;
+Polideportivo::Polideportivo(std::__cxx11::string nombre,
+                             std::__cxx11::string descripcion,
+                             std::__cxx11::string direccion){
+    this->nombre = nombre;
+    this->descripcion = descripcion;
+    this->direccion = direccion;
 }
 
-Polideportivo *Polideportivo::instance()
-{
-    if(instancia == 0)
-        instancia = new Polideportivo;
-    return instancia;
-}
-std::vector<Espacio_comun> *Polideportivo::obtener_espacios(){
-    return this->espacios_deportivos;
-}
 
-void Polideportivo::agregar_espacio(Espacio_comun espacio_comun)
-{
-    this->espacios_deportivos->push_back(espacio_comun);
-}
 
-void Polideportivo::eliminar_espacio(Espacio_comun espacio_comun)
-{
-
-}
 
 

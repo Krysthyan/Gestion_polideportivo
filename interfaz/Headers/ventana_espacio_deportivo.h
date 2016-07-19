@@ -3,7 +3,10 @@
 #include "Servicio/Headers/estado_srv.h"
 #include "Servicio/Headers/espacio_srv.h"
 #include <QWidget>
+#include <QMessageBox>
 #include "Objetos/Headers/polideportivo.h"
+#include "Servicio/Headers/polideportivo_srv.h"
+#include "Servicio/Headers/espacio_comun_srv.h"
 
 
 namespace Ui {
@@ -23,6 +26,8 @@ private slots:
 
     void on_btn_agregar_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Ventana_espacio_deportivo *ui;
     void agregar_estados();
@@ -30,7 +35,9 @@ private:
     Estado_SRV estados_srv;
     Espacio_SRV espacios_srv;
     Espacio_comun *espacio_comun;
-    Polideportivo *polideportivo = Polideportivo::instance();
+    Polideportivo_SRV pol_srv;
+    Espacio_comun_SRV espacio_comun_srv;
+
     //Ventana_agregar_polideportivo *ventana_polideportivo;
 
 

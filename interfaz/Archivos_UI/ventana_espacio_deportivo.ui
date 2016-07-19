@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Ventana_espacio_deportivo</class>
  <widget class="QWidget" name="Ventana_espacio_deportivo">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -40,6 +43,9 @@
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox_espacios">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -79,6 +85,9 @@
    </property>
   </widget>
   <widget class="QTimeEdit" name="time_hora_cerrada">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -96,6 +105,9 @@
    </property>
   </widget>
   <widget class="QTimeEdit" name="time_hora_apertura">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -125,16 +137,6 @@
     <string>Précio por hora</string>
    </property>
   </widget>
-  <widget class="QDoubleSpinBox" name="spin_precio_por_hora">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>330</y>
-     <width>66</width>
-     <height>23</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
@@ -162,6 +164,9 @@
    </property>
   </widget>
   <widget class="QComboBox" name="comboBox_estados">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -172,6 +177,9 @@
    </property>
   </widget>
   <widget class="QPushButton" name="btn_agregar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>279</x>
@@ -211,6 +219,9 @@
    </property>
   </widget>
   <widget class="QLineEdit" name="entry_nombre">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -285,7 +296,7 @@
     <string>24h</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="entry_nombre_pol">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -306,6 +317,19 @@
    </property>
    <property name="text">
     <string>Consultar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="spin_precio_por_hora">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>330</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>

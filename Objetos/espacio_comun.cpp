@@ -5,7 +5,7 @@ Espacio_comun::Espacio_comun(std::__cxx11::string nombre,
                                      std::__cxx11::string estado,
                                      std::__cxx11::string hora_apertura,
                                      std::__cxx11::string hora_cierre,
-                                     double precio_por_hora)
+                                     std::__cxx11::string precio_por_hora)
 {
     this->nombre = nombre;
     this->tipo_espcio = tipo_espacio;
@@ -40,7 +40,7 @@ void Espacio_comun::set_hora_cierre(std::__cxx11::string hora_cierre)
     this->hora_cierre = hora_cierre;
 }
 
-void Espacio_comun::set_precio_por_hora(double precio_por_hora)
+void Espacio_comun::set_precio_por_hora(std::string precio_por_hora)
 {
     this->precio_por_hora = precio_por_hora;
 }
@@ -70,7 +70,7 @@ std::__cxx11::string Espacio_comun::obtener_hora_cierre()
     return this->hora_cierre;
 }
 
-double Espacio_comun::obtener_precio_por_hora()
+std::string Espacio_comun::obtener_precio_por_hora()
 {
     return this->precio_por_hora;
 }

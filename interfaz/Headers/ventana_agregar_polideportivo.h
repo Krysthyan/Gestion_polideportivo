@@ -2,7 +2,9 @@
 #define VENTANA_AGREGAR_POLIDEPORTIVO_H
 #include "ventana_espacio_deportivo.h"
 #include "Objetos/Headers/polideportivo.h"
+#include "Servicio/Headers/polideportivo_srv.h"
 #include <QWidget>
+#include <QMessageBox>
 
 namespace Ui {
 class Ventana_agregar_polideportivo;
@@ -17,15 +19,15 @@ public:
     ~Ventana_agregar_polideportivo();
 
 private slots:
-    void on_btn_agregar_espacio_clicked();
+
+    void on_btn_agregar_clicked();
 
 private:
     Ui::Ventana_agregar_polideportivo *ui;
 
 private:
-    void  agregar_espacios();
-    Ventana_espacio_deportivo *ventana_e_d;
-    Polideportivo *polideportivo = Polideportivo::instance();
+    Polideportivo_SRV pol_srv;
+
 };
 
 #endif // VENTANA_AGREGAR_POLIDEPORTIVO_H

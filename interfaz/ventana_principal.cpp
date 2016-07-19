@@ -65,3 +65,33 @@ void Ventana_principal::on_btn_agregar_pol_clicked()
     this->ventana_polideportivo = new Ventana_agregar_polideportivo();
     this->ventana_polideportivo->show();
 }
+
+void Ventana_principal::on_btn_add_espacio_clicked()
+{
+    this->ventana_add_espacio = new Ventana_espacio_deportivo();
+    this->ventana_add_espacio->show();
+}
+
+void Ventana_principal::on_btn_mod_espacio_clicked()
+{
+    this->ventana_mod_espacio = new Ventana_espacio_mod();
+    this->ventana_mod_espacio->show();
+}
+
+void Ventana_principal::on_btn_del_espacio_clicked()
+{
+    this->ventanap_del_espacio = new Ventana_espacio_del();
+    this->ventanap_del_espacio->show();
+}
+
+void Ventana_principal::on_btn_eliminar_pol_clicked()
+{
+    this->ven_del_pol = new Ventana_del_polideportivo();
+    this->ven_del_pol->show();
+}
+
+void Ventana_principal::on_btn_modificar_pol_clicked()
+{
+    this->ven_mod_pol = new Ventana_mod_polideportivo();
+    this->ven_mod_pol->show();
+}
